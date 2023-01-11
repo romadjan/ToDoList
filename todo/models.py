@@ -7,6 +7,7 @@ class Task(models.Model):
     task_description = models.CharField(max_length=600, blank=True, null=True)
     created_time = models.DateTimeField(auto_now_add=False, auto_now=True, null=True)
     complete = models.BooleanField(default=False)
+    second_name = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return f"{self.task_title}"
